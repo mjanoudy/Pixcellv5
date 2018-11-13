@@ -194,6 +194,7 @@ class PaymentViewController: UIViewController, OPPCheckoutProviderDelegate {
         if segue.identifier == "SelectCharitySegue" {
             if let dest = segue.destination as? CharityViewController {
                 dest.didSubmit = self.didSubmit
+                dest.amountOwed = self.amountOwed
             }
         }
     }
